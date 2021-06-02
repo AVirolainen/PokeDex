@@ -8,7 +8,6 @@ function App() {
         <img className="logo" src={logo} alt="logo"/>
         <ViewBox />
       </div>
-    
   );
 }
 
