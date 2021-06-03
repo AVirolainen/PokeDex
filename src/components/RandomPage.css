@@ -1,0 +1,27 @@
+.randomPage{
+    display: flex;
+}
+
+.infoPicture{
+    width: 50%;
+    position: relative;
+    
+}
+
+.pokemonImage{
+    position: relative;
+    width: 70%;
+    
+    
+}
+
+.pokemonName{
+    
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: #f54260;
+    height: 90%;
+    width: 90%;
+    margin: -120px auto 0 auto
+    
+}

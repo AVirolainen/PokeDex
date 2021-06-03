@@ -15,7 +15,6 @@ import {
 import RandomPage from "./RandomPage"
 import InfoPage from "./InfoPage"
 
-import Pokedex from 'pokedex-promise-v2'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,16 +35,6 @@ const useStyles = makeStyles((theme) => ({
 
 const ViewBox = ()=>{
     const classes = useStyles();
-
-    var P = new Pokedex();
-
-    P.getPokemonByName('eevee') // with Promise
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log('There was an ERROR: ', error);
-    });
 
     return (
         <Router>
@@ -84,7 +73,7 @@ const ViewBox = ()=>{
                     </div>
                     </div>
 
-                    
+
                 </div>
 
                 </Route>

@@ -1,3 +1,6 @@
+import Pokedex from 'pokedex-promise-v2'
+
+
 const initialState ={ 
     name: 'Василий',
     surname: 'Реактов',
