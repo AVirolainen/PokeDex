@@ -2,13 +2,24 @@ import './App.css';
 import ViewBox from "./components/ViewBox"
 import logo from "./assets/pokedex_logo.png"
 
-function App() {
+import { connect } from 'react-redux'
+
+
+function App(props) {
+  const { name, surname, age } = props.user
+  console.log(name)
   return (
       <div className="App">      
         <img className="logo" src={logo} alt="logo"/>
-        <ViewBox />
+        <ViewBox name={name} surname={surname} age={age}/>
       </div>
   );
 }
 
-export default App;
+function mapStateToProps (state) {
+  return {
+    user: state
+  }
+}
+
+export default connect(mapStateToProps)(App)

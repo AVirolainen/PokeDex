@@ -18,13 +18,18 @@
     border-radius: 45px;
 }
 
-.boxImage:hover{
-    opacity: 0.5;
-}
+
 
 .boxWrapper{
     padding-top: 35px; 
 
     display: flex;
     justify-content: space-around;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
 }
