@@ -16,12 +16,40 @@
 }
 
 .pokemonName{
-    
+    overflow: hidden;
     border: 5px solid;
     border-radius: 20px;
     border-color: #f54260;
-    height: 90%;
+    height: 50%;
     width: 90%;
-    margin: -120px auto 0 auto
+    margin: -120px auto 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background: #CB356B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+
+    
+}
+
+.pokemonTitle{
+    margin: auto;
+    font-size: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 20px;
+    width: 80%
+    
+}
+
+.smallPic{
+    width: 25%
 }
