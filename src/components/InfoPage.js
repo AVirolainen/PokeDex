@@ -1,4 +1,6 @@
-const InfoPage = ()=> {
+
+
+const InfoPage =()=> {
     return (
         <div>      
             Hello

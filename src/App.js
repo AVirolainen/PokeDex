@@ -11,7 +11,7 @@ function App(props) {
   return (
       <div className="App">      
         <img className="logo" src={logo} alt="logo"/>
-        <ViewBox />
+        <ViewBox info={props.info}/>
       </div>
   );
 }

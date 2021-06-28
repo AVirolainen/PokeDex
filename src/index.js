@@ -3,24 +3,40 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import{ createStore }from'redux';
-import{ Provider }from'react-redux';
+import Pokedex from 'pokedex-promise-v2'
 
-import reportWebVitals from './reportWebVitals';
-import configureStore from "./store/configureStore.js"
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-const store = configureStore()
+const P = new Pokedex();
 
-ReactDOM.render(
-  <Provider store={store}>
+P.getPokemonByName(getRandomInt(1, 600)) 
+.then(function(response) {
+  console.log(response);
+
+  render(response)
+
+})
+.catch(function(error) {
+  console.log('There was an ERROR: ', error);
+});
+
+const render =(info)=>{
+  ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <App info={info}/>
     </React.StrictMode>
-  </Provider>,
+  ,
   document.getElementById('root')
-);
+  );
+
+}
 
 
 
 
-reportWebVitals();
+
+

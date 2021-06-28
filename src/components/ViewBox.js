@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ViewBox = ()=>{
+const ViewBox = (props)=>{
     const classes = useStyles();
 
     return (
@@ -77,7 +77,7 @@ const ViewBox = ()=>{
                 </div>
 
                 </Route>
-                <Route path="/random" component={RandomPage} />
+                <Route path="/random" render={()=><RandomPage info={props.info}/>}/>
                 <Route path="/info" component={InfoPage} />
             </Switch>
             </div>

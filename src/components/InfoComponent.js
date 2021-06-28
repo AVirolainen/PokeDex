@@ -1,6 +1,9 @@
 import "./InfoComponent.css"
 import logo from "../assets/pokemon_logo.png"
 
+import genPic from "./types.js" 
+
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -10,17 +13,23 @@ const InfoComponent =(props)=> {
     return (
         <div className="infoComponent">      
             <img className="pokemonLogo" src={logo} alt="logo" />
-            <din className="infoBox">
-                Type: {info.types.map(item=>{
-                    if(info.types.length < 1 || item == info.types[info.types.length-1]){
-                        return capitalizeFirstLetter(item.type.name)
-                    }
-                    return capitalizeFirstLetter(item.type.name) + ", "
-                })}
-            </din>
+            <div className="infoBox">
+            Type:
+                <div className="typesWrapper">
+                    {info.types.map(item=>{
+                        return (<div>
+                            {capitalizeFirstLetter(item.type.name)}
+                            {genPic(item.type.name)}
+                        </div>)
+                        }
+                    )}
+                </div>
+            </div>
+
         </div>
         
     );
   }
   
   export default InfoComponent;
+
