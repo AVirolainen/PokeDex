@@ -3,7 +3,6 @@ import sandshrew from "../assets/po/sandshrew.jpg"
 import bulbasaur from "../assets/po/bulbasaur.jpg"
 
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import {
     BrowserRouter as Router,
@@ -15,26 +14,7 @@ import {
 import RandomPage from "./RandomPage"
 import InfoPage from "./InfoPage"
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      marginTop: "15px",
-      
-      
-    },
-  },
-  button:{
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}));
-
 const ViewBox = (props)=>{
-    const classes = useStyles();
 
     return (
         <Router>
@@ -46,11 +26,9 @@ const ViewBox = (props)=>{
                     <div className="boxImage">
                         <img src={sandshrew} alt="logo"/>
                         
-                            <Link to="/random">
-                            <div className={classes.root}>
-                                <Button variant="contained">
-                                    Show random Pokemon
-                                </Button>
+                            <Link to="/random" style={{ textDecoration: 'none' }}>
+                            <div className="route-button random">
+                                    Show random Pokemon   
                               </div>
                             </Link>
               
@@ -58,16 +36,18 @@ const ViewBox = (props)=>{
                     <div className="boxImage">
                         <img src={bulbasaur} alt="logo"/>
                     <div className="wrapper">
-                        <div className={classes.button}>
+                        <div className="outlined-basic">
                             <TextField id="outlined-basic" variant="outlined" />
                         </div>
                         
-                            <Link to="/info">
-                            <div className={classes.root}>
-                                <Button variant="contained">
+                            <Link to="/info" style={{ textDecoration: 'none' }}>
+                              <div>
+
+                                  <div className="route-button">
                                     Show info
-                                </Button>
-                                </div>
+                                  </div>
+
+                              </div>
                             </Link>
                           
                     </div>

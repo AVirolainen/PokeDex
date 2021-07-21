@@ -1,7 +1,11 @@
 import "./InfoComponent.css"
 import logo from "../assets/pokemon_logo.png"
 
+import { useEffect, useState } from "react";
+
 import genPic from "./types.js" 
+
+import axios from "axios";
 
 
 function capitalizeFirstLetter(string) {
@@ -10,6 +14,24 @@ function capitalizeFirstLetter(string) {
 
 const InfoComponent =(props)=> {
     const info = props.info
+    const url = `https://pokeapi.co/api/v2/pokemon-species/${info.name}/`
+
+    const [infoText, setInfoText] = useState(" ")
+
+    const fetchData = async () => {
+        const result = await axios(url);
+
+        setInfoText(result.data.flavor_text_entries[0].flavor_text    
+
+
+              )
+        console.log(result.data.flavor_text_entries[0].flavor_text);
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, [url]);
+
     return (
         <div className="infoComponent">      
             <img className="pokemonLogo" src={logo} alt="logo" />
@@ -24,6 +46,9 @@ const InfoComponent =(props)=> {
                         }
                     )}
                 </div>
+            </div>
+            <div>
+                {infoText}
             </div>
 
         </div>
