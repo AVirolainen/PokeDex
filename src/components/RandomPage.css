@@ -2,6 +2,12 @@
     display: flex;
 }
 
+@media screen and (max-width: 1180px) {
+    .randomPage{
+        display: block;
+    }
+}
+
 .infoPicture{
     width: 50%;
     position: relative;

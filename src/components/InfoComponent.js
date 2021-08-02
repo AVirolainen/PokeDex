@@ -21,10 +21,7 @@ const InfoComponent =(props)=> {
     const fetchData = async () => {
         const result = await axios(url);
 
-        setInfoText(result.data.flavor_text_entries[0].flavor_text    
-
-
-              )
+        setInfoText(result.data.flavor_text_entries[0].flavor_text)
         console.log(result.data.flavor_text_entries[0].flavor_text);
     };
 

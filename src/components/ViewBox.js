@@ -27,7 +27,7 @@ const ViewBox = (props)=>{
                 
                 <div className="boxWrapper">
 
-                <Carousel showThumbs={false} dynamicHeight={false} width={600} showStatus={false} autoPlay={true} infiniteLoop={true} showArrows={false}>
+                <Carousel showThumbs={false} dynamicHeight={false} width={300} showStatus={false} autoPlay={true} infiniteLoop={true} showArrows={false}>
 
                 <div className="boxImage">
                     <img src={sandshrew} alt="logo"/>

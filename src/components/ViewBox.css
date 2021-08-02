@@ -7,7 +7,17 @@
 
     border-radius: 45px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+@media screen and (max-width: 600px) {
+    .viewBox{
+        width: 95%;
+    }
+  }
 
 .boxImage{
     transition: 0.8s;
@@ -18,15 +28,20 @@
     width: 80%;
     height: 80%;
     border-radius: 45px;
-    min-width: 400px;
+    
 
   
 }
 
-@media screen and (max-width: 1180px) {
+/* @media screen and (max-width: 1180px) {
     .boxImage img{
         max-width: 60%;
-        border-radius: 45px;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    .boxImage img{
+        max-width: 280px;
     }
 }
 
@@ -36,24 +51,9 @@
 
     display: flex;
     justify-content: space-around;
-}
 
-.boxWrapper{
-    padding-top: 35px; 
-
-    display: flex;
-    justify-content: space-around;
-}
-
-@media screen and (max-width: 1180px) {
-    .boxWrapper{
-        padding-top: 35px; 
-    
-        display: block;
-        
-    }
-}
-
+    width: 500px;
+}   
 
 .route-button{
     background: #fe5858;
@@ -77,6 +77,12 @@
 
     transition: 0.5s;
 }
+@media screen and (max-width: 600px) {
+    .route-button{
+        width: 250px;
+    }
+}
+
 
 .route-button:hover{
     opacity: 0.5
