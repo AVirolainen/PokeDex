@@ -11,13 +11,24 @@
 
 .boxImage{
     transition: 0.8s;
+    margin-bottom: 30px;
 }
 
 .boxImage img{
     width: 80%;
+    height: 80%;
     border-radius: 45px;
+    min-width: 400px;
+
+  
 }
 
+@media screen and (max-width: 1180px) {
+    .boxImage img{
+        max-width: 60%;
+        border-radius: 45px;
+    }
+}
 
 
 .boxWrapper{
@@ -25,6 +36,22 @@
 
     display: flex;
     justify-content: space-around;
+}
+
+.boxWrapper{
+    padding-top: 35px; 
+
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1180px) {
+    .boxWrapper{
+        padding-top: 35px; 
+    
+        display: block;
+        
+    }
 }
 
 
