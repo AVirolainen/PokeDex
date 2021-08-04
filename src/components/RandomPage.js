@@ -25,7 +25,7 @@ const RandomPage =(props)=> {
             
           </div>  
 
-          <InfoComponent info={props.info}/>
+          {/* <InfoComponent info={props.info}/> */}
           
       </div>
   );

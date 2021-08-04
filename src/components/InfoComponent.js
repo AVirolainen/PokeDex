@@ -43,10 +43,11 @@ const InfoComponent =(props)=> {
                         }
                     )}
                 </div>
+                <div className="bodyText">
+                    {infoText}
+                </div>
             </div>
-            <div>
-                {infoText}
-            </div>
+
 
         </div>
         
