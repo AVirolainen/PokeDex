@@ -4,9 +4,9 @@
     border-radius: 20px;
     border-color: #f54260;
     
-    height: 400px;
-    min-width: 50%;
-    margin: 0 10px 0 0;
+    height: 435px;
+    max-width: 50%;
+    margin: 10px 10px 0 0;
 
 
 
@@ -15,9 +15,23 @@
     background: linear-gradient(to right, #CB356B, #BD3F32); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+@media screen and (max-width: 1180px) {
+    .infoComponent{
+        margin: 0 auto;
+        min-width: 90%;
+    }
+}
+
 .pokemonLogo{
-    max-width: 50%;
+    width: 250px;
     height: 100px;
+}
+
+@media screen and (max-width: 400px) {
+    .pokemonLogo{
+        width: 200px;
+        height: 70px;
+    }
 }
 
 .infoBox{
@@ -44,4 +58,6 @@
 
 .bodyText{
     font-size: 15px;
+    margin-top: 45px;
+    margin-bottom: 20px;
 }

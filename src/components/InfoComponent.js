@@ -37,9 +37,9 @@ const InfoComponent =(props)=> {
                 <div className="typesWrapper">
                     {info.types.map(item=>{
                         return (<div>
-                            {capitalizeFirstLetter(item.type.name)}
-                            {genPic(item.type.name)}
-                        </div>)
+                                    {capitalizeFirstLetter(item.type.name)}
+                                    {genPic(item.type.name)}
+                                </div>)
                         }
                     )}
                 </div>
