@@ -1,4 +1,6 @@
 import './ViewBox.css';
+import {useEffect, useState} from "react"
+
 import sandshrew from "../assets/po/sandshrew.jpg"
 import bulbasaur from "../assets/po/bulbasaur.jpg"
 
@@ -18,6 +20,12 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ViewBox = (props)=>{
+
+    const [name, setName] = useState(" ")  
+
+    const changeHandler =(a)=>{
+        setName(a.target.value)
+    }
 
     return (
         <Router>
@@ -45,7 +53,7 @@ const ViewBox = (props)=>{
                     <img src={bulbasaur} alt="logo"/>
                     <div className="wrapper">
                         <div className="outlined-basic">
-                            <TextField id="outlined-basic" variant="outlined" />
+                            <TextField id="outlined-basic" variant="outlined" onChange={changeHandler} />
                         </div>
                         
                             <Link to="/info" style={{ textDecoration: 'none' }}>
@@ -68,7 +76,7 @@ const ViewBox = (props)=>{
 
                 </Route>
                 <Route path="/random" render={()=><RandomPage info={props.info}/>}/>
-                <Route path="/info" component={InfoPage} />
+                <Route path="/info" component={()=><InfoPage info={name} />} />
             </Switch>
             </div>
         </Router>

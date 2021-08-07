@@ -15,19 +15,17 @@ const P = new Pokedex();
 
 P.getPokemonByName(getRandomInt(1, 600)) 
 .then(function(response) {
-  console.log(response);
-
   render(response)
-
 })
 .catch(function(error) {
   console.log('There was an ERROR: ', error);
 });
 
-const render =(info)=>{
+
+const render=(info)=>{
   ReactDOM.render(
     <React.StrictMode>
-      <App info={info}/>
+      <App info={info} />
     </React.StrictMode>
   ,
   document.getElementById('root')

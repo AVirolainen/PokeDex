@@ -46,6 +46,9 @@
 
     font-size: 35px;
 
+    overflow: scroll;
+    overflow-x: hidden;
+
 }
 
 .typesWrapper{
@@ -59,5 +62,5 @@
 .bodyText{
     font-size: 15px;
     margin-top: 45px;
-    margin-bottom: 20px;
+    
 }
